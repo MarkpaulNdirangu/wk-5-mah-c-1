@@ -141,7 +141,10 @@
 
 | Phase | Deliverable | Actual Output | Variance | Owner |
 |-------|-------------|---------------|----------|-------|
-| | | | | |
+| 1| Test schedule | test schedule | | Mercy Benu |
+| 2| Test cases | Test cases | | Markpaul Ndirangu |
+| 3| Test report |test report | |  Viron Ochieng' |
+| 4| Final report | final report | | All |
 
 **Progress Tracking Method:**  
 **Change Control Notes:**
@@ -167,4 +170,3 @@
 
 
 ## Overall Summary
-
