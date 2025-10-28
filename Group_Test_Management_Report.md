@@ -135,7 +135,10 @@
 
 | Phase | Deliverable | Actual Output | Variance | Owner |
 |-------|-------------|---------------|----------|-------|
-| | | | | |
+| 1| Test schedule | test schedule | | Mercy Benu |
+| 2| Test cases | Test cases | | Markpaul Ndirangu |
+| 3| Test report |test report | |  Viron Ochieng' |
+| 4| Final report | final report | | All |
 
 **Progress Tracking Method:**  
 **Change Control Notes:**
@@ -158,5 +161,6 @@
 | Mercy Benu | Test Manager | mb | 27th October 25|
 | Markpaul Ndirangu | Risk Analyst | mn | 27th October 25|
 | Viron Ochieng' | Test Executor | vo | 27th October 25|
+
 
 ## Overall Summary
