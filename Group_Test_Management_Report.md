@@ -55,12 +55,50 @@
 
 ### Risks
 
-| ID | Feature | Risk Description | Likelihood | Impact | Priority | Mitigation Strategy |
-|----|---------|------------------|------------|--------|----------|---------------------|
-| | | | | | | |
+| ID  | Feature                  |    Risk Description                                   | Likelihood        | Impact       |   Priority        |          Mitigation Strategy                                        |
+ 1     Guess Input Validation       Failure to handle edge cases in user input            High               Medium            Medium            Run functional tests on input field with edge cases 
+                                     leading to crashes or glitches
 
 
 
+
+                                                                                                                                                                                                                        
+2    Hint Usage Tracking             Incorrect deduction of points for multiple hints       HIgh               High            High                End-to-end tests: Simulate multiple hint requests per puzzle;                                                                                                                                                         confirm deduction (−2 points) only once, no negative score
+                                                                                                                                                            below 0, and reduced reward (+5) on solve.
+                                            or allowing negative scores
+
+
+                                            
+
+3    Score Calculation & Bonus          Errors in scoring flows or bonus application,      High               High            High                    Test scoring flows: Direct solve (+10), hint solve (+5 −2),                                                                                                                                                             bonus (×2 every 3rd solve); edge case: 0-score bonus.
+                                                including edge cases like 0-score
+
+
+
+
+4     Event Handling (Buttons/Keys)       UI glitches from rapid interactions or           High                Medium       Medium                         Usability tests: Rapid clicks on submit/hint/new/reset;                                                                                                                                                                     Enter key on input.              
+                                                        key presses
+
+
+
+
+5      CSS Responsiveness                   Layout issues on smaller screens or mobile     Medium                Low            Low                        Cross-device tests: Resize to <900px/mobile; check grid                                                                                                                                                                 collapse, input/button wrapping, font clamping,
+                                                                                                                                                                and touch interactions (no hover-only states).
+                                                            devices 
+
+
+
+
+
+
+6     Performance on Repeated Plays      Degradation in app speed during extended sessions   Low                 Low              Low                         Load tests: Solve 50+ puzzles in session.
+
+
+
+
+
+7      Browser Compatibility              Feature failures across different browsers         Low                  Low             Low                         Cross-browser tests: Chrome/Firefox/Safari/Edge 
+ 
 -----------------------------
 ### **Test Cases**
 
@@ -158,5 +196,6 @@
 | Mercy Benu | Test Manager | mb | 27th October 25|
 | Markpaul Ndirangu | Risk Analyst | mn | 27th October 25|
 | Viron Ochieng' | Test Executor | vo | 27th October 25|
+
 
 ## Overall Summary
