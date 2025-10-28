@@ -57,7 +57,18 @@
 
 | ID | Feature | Risk Description | Likelihood | Impact | Priority | Mitigation Strategy |
 |----|---------|------------------|------------|--------|----------|---------------------|
-| | | | | | | |
+| 1	|Guess Input Validation |	Failure to handle edge cases in user input leading to crashes or glitches|	High	| Medium	|Medium|	Run functional tests on input field with edge cases (e.g., empty string, very long text >100 chars, special characters) to ensure trimming and lowercase conversion work without crashes or UI glitches.|
+| 2  |Hint Usage Tracking	| Incorrect deduction of points for multiple hints or allowing negative scores |	High	| High	| High |	End-to-end tests: Simulate multiple hint requests per puzzle; confirm deduction (−2 points) only once, no negative score below 0, and reduced reward (+5) on solve.|
+
+| 3  |Score Calculation & Bonus	| Errors in scoring flows or bonus application, including edge cases like 0-score	|High |	High	 |High	| Test scoring flows: Direct solve (+10), hint solve (+5 −2), bonus (×2 every 3rd solve); edge case: 0-score bonus.|
+
+| 4 | Event Handling (Buttons/Keys)|	UI glitches from rapid interactions or key presses	| High |	Medium |	Medium	| Usability tests: Rapid clicks on submit/hint/new/reset; Enter key on input.|
+
+| 5 | CSS Responsiveness |	Layout issues on smaller screens or mobile devices	 | Medium	| Low | Low	 | Cross-device tests: Resize to <900px/mobile; check grid collapse, input/button wrapping, font clamping, and touch interactions (no hover-only states).|
+
+| 6 | Performance on Repeated Plays | 	Degradation in app speed during extended sessions |	Low |	Medium | Low |	Load tests: Solve 50+ puzzles in session.|
+
+| 7 | Browser Compatibility |	Feature failures across different browsers |	Low	| Medium |	Low	Cross-browser tests: Chrome/Firefox/Safari/Edge |
 
 
 
@@ -158,5 +169,6 @@
 | Mercy Benu | Test Manager | mb | 27th October 25|
 | Markpaul Ndirangu | Risk Analyst | mn | 27th October 25|
 | Viron Ochieng' | Test Executor | vo | 27th October 25|
+
 
 ## Overall Summary
